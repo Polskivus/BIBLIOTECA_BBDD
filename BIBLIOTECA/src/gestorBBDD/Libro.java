@@ -1,16 +1,16 @@
 package gestorBBDD;
 
-public class Libros {
+public class Libro {
 	int id;
 	String titulo;
 	String autor;
 	int num_pag;
 	
-	public Libros() {
+	public Libro() {
 
 	}
 
-	public Libros(int id, String titulo, String autor, int num_pag) {
+	public Libro(int id, String titulo, String autor, int num_pag) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
