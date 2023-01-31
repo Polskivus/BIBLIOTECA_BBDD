@@ -1,14 +1,15 @@
 package gestorBBDD;
 
-public class GestorBBDD {
+import java.sql.SQLException;
+import java.sql.Statement;
 
-	public void InsertarLibro() {
+import conexion.Conexion;
+
+public class GestorBBDD extends Conexion {
+
+	public void InsertarLibro() throws SQLException {
 		
-		Libros libro = new Libros();
-		
-		System.out.println("----------------------------------");
-		System.out.println("Introduce el titulo del libro");
-		//libro.setTitulo();
-		
+		Statement st = cn.createStatement();
+	
 	}
 }
