@@ -52,6 +52,7 @@ public class GestorBiblioteca {
 
 			case 4:
 				break;
+				
 			}
 		} while (opc != 4);
 
