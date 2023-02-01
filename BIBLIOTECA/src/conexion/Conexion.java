@@ -15,6 +15,15 @@ public class Conexion {
 
 	}
 
+	public Connection getCn() {
+		return cn;
+	}
+
+	public void setCn(Connection cn) {
+		this.cn = cn;
+	}
+
+	
 	public void abrir_conexion() {
 
 		try {
@@ -27,14 +36,7 @@ public class Conexion {
 		}
 	}
 	
-	public Connection getCn() {
-		return cn;
-	}
-
-	public void setCn(Connection cn) {
-		this.cn = cn;
-	}
-
+	
 	public void cerrar_conexion() {
 		try {
 			cn.close();
