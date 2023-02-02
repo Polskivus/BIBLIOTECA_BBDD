@@ -10,7 +10,8 @@ public class Menu {
 	public static final int INSERTAR_LIBRO = 1;
 	public static final int ELIMINAR_LIBRO = 2;
 	public static final int VER_LIBROS = 3;
-	public static final int VOLVER_LIBRO = 4;
+	public static final int MODIFICAR_LIBRO = 4;
+	public static final int VOLVER_LIBRO = 5;
 	
 	public static final int VER_SOCIOS = 1;
 	public static final int VOLVER_SOCIOS = 2;
@@ -33,6 +34,7 @@ public class Menu {
 		System.out.println(INSERTAR_LIBRO+".- Insartar Libro");
 		System.out.println(ELIMINAR_LIBRO+".- Eliminar Libro");
 		System.out.println(VER_LIBROS+".- Ver libros");
+		System.out.println(MODIFICAR_LIBRO+".- Modificar Libro");
 		System.out.println(VOLVER_LIBRO+".- Volver al principal");
 		System.out.println("---------------------");
 	}
