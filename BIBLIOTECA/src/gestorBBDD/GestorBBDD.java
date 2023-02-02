@@ -90,5 +90,37 @@ public class GestorBBDD extends Conexion {
 		}
 
 	}
+	
+	public ArrayList<Socio> getSocios() {
+		
+		String selectString = "SELECT * FROM socios";
+		
+		ArrayList<Socio> socios = new ArrayList<Socio>();
+		
+		try {
+			
+			PreparedStatement stgetsocios = super.cn.prepareStatement(selectString);
+			ResultSet resultSet = stgetsocios.executeQuery(selectString);
+			
+			while(resultSet.next()) {
+				
+				Socio socio = new Socio();
+				
+				socio.setId(resultSet.getInt("id"));
+				socio.setNombre(resultSet.getString("nombre"));
+				socio.setApellido(resultSet.getString("apellido"));
+				socio.setDireccion(resultSet.getString("direccion"));
+				socio.setPoblacion(resultSet.getString("poblacion"));
+				socio.setDni(resultSet.getInt("dni"));
+				
+				socios.add(socio);
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return socios;
+	}
 
 }

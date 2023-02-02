@@ -21,6 +21,11 @@ public class Visor {
 		
 	}
 	
-	
+	public static void mostrarArraySocios(ArrayList<Socio> socios) {
+		
+		for (Socio socio : socios) {
+			System.out.println(socio);
+		}
+	}
 	
 }

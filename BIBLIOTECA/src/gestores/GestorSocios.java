@@ -1,8 +1,12 @@
 package gestores;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import gestorBBDD.GestorBBDD;
+import gestorBBDD.Socio;
 import menu.Menu;
+import visor.Visor;
 
 public class GestorSocios {
 
@@ -11,6 +15,8 @@ public class GestorSocios {
 	 */
 	
 	public static void run(Scanner sc) {
+		
+		GestorBBDD gestor = new GestorBBDD();
 		
 		int opc_socios;
 		
@@ -31,6 +37,11 @@ public class GestorSocios {
 			
 			switch (opc_socios) {
 			case Menu.VER_SOCIOS:
+				
+				gestor.abrir_conexion();
+				ArrayList<Socio> socios = gestor.getSocios();
+				Visor.mostrarArraySocios(socios);
+				gestor.cerrar_conexion();
 				
 				break;
 
