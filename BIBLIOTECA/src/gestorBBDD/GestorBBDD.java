@@ -3,12 +3,9 @@ package gestorBBDD;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import conexion.Conexion;
-import gestores.GestorLibros;
-import visor.Visor;
 
 public class GestorBBDD extends Conexion {
 
@@ -72,6 +69,26 @@ public class GestorBBDD extends Conexion {
 			e.printStackTrace();
 		}
 		return libros;
+	}
+
+	public void modificarLibro(Libro libro) {
+
+		String modificar = "UPDATE libros SET titulo = ? ,autor = ? ,Num_pag = ? WHERE id = ?";
+
+		try {
+			PreparedStatement stmodificar = super.cn.prepareStatement(modificar);
+
+			stmodificar.setString(1, libro.getTitulo());
+			stmodificar.setString(2, libro.getAutor());
+			stmodificar.setInt(3, libro.getNum_pag());
+			stmodificar.setInt(4, libro.getId());
+
+			stmodificar.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
