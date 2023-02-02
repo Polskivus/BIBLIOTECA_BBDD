@@ -23,7 +23,6 @@ public class Conexion {
 		this.cn = cn;
 	}
 
-	
 	public void abrir_conexion() {
 
 		try {
@@ -35,8 +34,7 @@ public class Conexion {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	public void cerrar_conexion() {
 		try {
 			cn.close();

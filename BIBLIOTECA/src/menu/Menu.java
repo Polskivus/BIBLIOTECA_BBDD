@@ -32,7 +32,7 @@ public class Menu {
 		System.out.println("---------------------");
 		System.out.println(INSERTAR_LIBRO+".- Insartar Libro");
 		System.out.println(ELIMINAR_LIBRO+".- Eliminar Libro");
-		System.out.println(VER_LIBROS+".-Ver libros");
+		System.out.println(VER_LIBROS+".- Ver libros");
 		System.out.println(VOLVER_LIBRO+".- Volver al principal");
 		System.out.println("---------------------");
 	}
