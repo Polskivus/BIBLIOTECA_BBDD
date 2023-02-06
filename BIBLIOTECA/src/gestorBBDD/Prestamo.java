@@ -10,13 +10,14 @@ public class Prestamo {
 	int id_libro;
 	int id_socio;
 	String fecha = dateFormat.format(new Date());
-	String devuelto = dateFormat.format(new Date());
+	int devuelto;
+
 
 	public Prestamo() {
 
 	}
 
-	public Prestamo(SimpleDateFormat dateFormat, int id_libro, int id_socio, String fecha, String devuelto) {
+	public Prestamo(SimpleDateFormat dateFormat, int id_libro, int id_socio, String fecha, int devuelto) {
 		super();
 		this.dateFormat = dateFormat;
 		this.id_libro = id_libro;
@@ -48,6 +49,7 @@ public class Prestamo {
 	public void setId_socio(int id_socio) {
 		this.id_socio = id_socio;
 	}
+	
 
 	public String getFecha() {
 		return fecha;
@@ -56,12 +58,21 @@ public class Prestamo {
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
+	
+//	public java.sql.Date getDate(){
+//		return (java.sql.Date) fecha;
+//	}
+//	
+//	public String getStringDate() {
+//		return ""+fecha;
+//	}
+//
 
-	public String getDevuelto() {
+	public int getDevuelto() {
 		return devuelto;
 	}
 
-	public void setDevuelto(String devuelto) {
+	public void setDevuelto(int devuelto) {
 		this.devuelto = devuelto;
 	}
 

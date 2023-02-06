@@ -1,8 +1,10 @@
 package visor;
 
+import java.util.Date;
 import java.util.Scanner;
 
 import gestorBBDD.Libro;
+import gestorBBDD.Prestamo;
 
 public class FormularioDeDatos {
 
@@ -50,7 +52,25 @@ public class FormularioDeDatos {
 
 		return libro_mod;
 	}
-	
-	
+
+	public static Prestamo insertar_Prestamo(Scanner sc) {
+
+		String fecha;
+		
+		Prestamo prestamo = new Prestamo();
+
+		System.out.println("Introduce el id del libro que quieres prestar");
+		prestamo.setId_libro(Integer.parseInt(sc.nextLine()));
+
+		System.out.println("Identificate");
+		prestamo.setId_socio(Integer.parseInt(sc.nextLine()));
+
+		fecha = prestamo.getFecha();
+		prestamo.setFecha(fecha);
+		
+		prestamo.setDevuelto(0);
+
+		return prestamo;
+	}
 
 }

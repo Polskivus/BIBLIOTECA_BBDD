@@ -122,5 +122,26 @@ public class GestorBBDD extends Conexion {
 		}
 		return socios;
 	}
+	
+	public void realizar_Prestamo(Prestamo prestamo) {
+		
+		String insertarPrestamo = "INSERT INTO prestamos (id_libro, id_socio, fecha, devuelto) VALUES (?,?,?,?)";
+		
+		try {
+			
+			PreparedStatement InsertarPrestamo = super.cn.prepareStatement(insertarPrestamo);
+			
+			InsertarPrestamo.setInt(1, prestamo.getId_libro());
+			InsertarPrestamo.setInt(2, prestamo.getId_socio());
+			InsertarPrestamo.setDate(3, prestamo.getFecha());
+			
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 }
